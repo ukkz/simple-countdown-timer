@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!--
+L( ◔ω◔)┘三└( ◔ω◔)」ソースコードを見ているお前！お前！お前！
+三┏( ^o^)┛ アンタならキッチンタイマーごとき自分ですぐ作れそうやな
+( ˘⊖˘) 。o(類似サイト沢山あるの知ってるか……)
+┌(┌՞ਊ՞)┐ 低クオリティのわりにクソ広告ばっか出しやがって
+(´へωへ`*) そんなどうしようもないWebに貢献するんじゃねえぞ
+▂▅▇█▓▒░(’ω’)░▒▓█▇▅▂オラ時間だあああああああああああああ
+(☝´◉ ਊ ◉)☝ ふぁぼってから使えよ！！！！！！
+-->
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="表示が大きくとてもシンプルなカウントダウンタイマーです。The biggest & simplest count-down timer.">
+	<meta name="author" content="uko">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143017782-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-143017782-3');
+	</script>
+
+	<meta property="og:url" content="https://count-down.tk">
+	<meta property="og:title" content='SimpleCountDown - The simplest timer web app'>
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="表示が大きくとてもシンプルなカウントダウンタイマーです。The biggest & simplest count-down timer.">
+	<meta property="og:image" content="https://count-down.tk/img/ogpimg.jpg">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@harmoniko">
+	<meta name="twitter:creator" content="@harmoniko">
+	<meta property="og:site_name" content='SimpleCountDown - The simplest timer web app'>
+	<meta property="og:locale" content="ja_JP">
+	<meta property="fb:app_id" content="">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="img/manifest.json">
+	<meta name="msapplication-TileColor" content="#010101">
+	<meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+	<meta name="theme-color" content="#010101">
+
+	<meta name="google" content="notranslate">
+	<meta name="googlebot" content="noarchive, noimageindex">
+
+	<title>SimpleCountDown</title>
+
+	<!-- CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="d-flex align-items-center">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="mx-auto" id="display-back">
+				88:88
+				<div class="mx-auto" id="display"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="d-flex justify-content-center mx-auto flex-wrap">
+				<button type="button" id="btn-5m"    class="btn btn-light btn-lg p-1 m-2" onclick="javascript:timerSet(300);">+5m</button>
+				<button type="button" id="btn-1m"    class="btn btn-light btn-lg p-1 m-2" onclick="javascript:timerSet(60);">+1m</button>
+				<button type="button" id="btn-10s"   class="btn btn-light btn-lg p-1 m-2" onclick="javascript:timerSet(10);">+10s</button>
+				<button type="button" id="btn-1s"    class="btn btn-light btn-lg p-1 m-2" onclick="javascript:timerSet(1);">+1s</button>
+				<button type="button" id="btn-start" class="btn btn-light btn-lg p-1 m-2" onclick="javascript:timerStart();">Start</button>
+				<button type="button" id="btn-pause" class="btn btn-light btn-lg p-1 m-2" onclick="javascript:timerPause();">Pause</button>
+				<button type="button" id="btn-reset" class="btn btn-light btn-lg p-1 m-2" onclick="javascript:timerReset();">Reset</button>
+				<button type="button" id="btn-hp"    class="btn btn-dark p-1 m-2" onclick="window.open().location.href='https://uko.jp'">HP</button>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- JS -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/alarm.js"></script>
+	<script src="js/clock.js"></script>
+
+</body>
+
+</html>

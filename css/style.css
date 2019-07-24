@@ -1,0 +1,41 @@
+
+/* 
+	7セグ・14セグフォント 「DSEG」
+    https://www.keshikan.net/fonts.html
+	Font "DSEG" by けしかん
+	お借りしております。
+*/
+@font-face {
+    font-family: 'DSEG7';
+    src: url('DSEG7Classic-BoldItalic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'DSEG14';
+    src: url('DSEG14Classic-Italic.woff2') format('woff2');
+}
+
+
+body
+{
+	height: 100vh;
+	color: white;
+	background-color: black;
+	font-family: 'DSEG14', monospace;
+}
+
+
+#display
+{
+	position: absolute;
+	top: 0; left: 0;
+	color: white;
+	font-family: 'DSEG7', monospace;
+	font-size: 27vw;
+}
+#display-back
+{
+	position: relative;
+	color: rgb(20, 20, 20);
+	font-family: 'DSEG7', monospace;
+	font-size: 27vw;
+}
